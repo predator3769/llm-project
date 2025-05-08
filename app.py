@@ -13,6 +13,9 @@ app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 
 global cache
 
+if __name__=='main':
+    app.run(debug=True, port=8050, host='0.0.0.0')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def display_form():
